@@ -70,7 +70,7 @@ int consulta() //Função responsavel pela consuta.
 	FILE *file;
 	file = fopen(cpf, "r");
 	
-	if(file == NULL) //Verifica se o CPF é existênte sdentro do arquivo.
+	if(file == NULL) //Verifica se o CPF é existênte dentro do arquivo.
 	{
 		printf("Não foi possível abrir o arquivo, não localizado!\n");
 	}
@@ -121,7 +121,8 @@ int main() //Função "main" sempre será a primeira a rodar.
 		printf("Escolha a opção desejada do menu:\n\n");
 		printf("\t1 Registrar nomes\n");
 		printf("\t2 Consultar nomes\n");
-		printf("\t3 Deletar nomes\n\n");
+		printf("\t3 Deletar nomes\n");
+		printf("\t4 Sair do programa\n\n");
 		printf("Opção: ");
 	
 		scanf("%d", &opcao);
@@ -140,6 +141,11 @@ int main() //Função "main" sempre será a primeira a rodar.
 			
 			case 3:
 				deletar();
+				break;
+			
+			case 4:
+				printf("Obrigado por utilizar o sistema!\n");
+				return 0;
 				break;
 				
 			default:
